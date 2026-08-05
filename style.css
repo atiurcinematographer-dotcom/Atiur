@@ -1,0 +1,693 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#090909;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    color:#D4AF37;
+
+    margin-bottom:60px;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.navbar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+.logo{
+
+    font-size:34px;
+
+    font-family:'Cinzel',serif;
+
+    font-weight:700;
+
+    color:#D4AF37;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#fff;
+
+    transition:.35s;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+}
+
+.nav-links a:hover{
+
+    color:#D4AF37;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.85)
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    width:min(900px,92%);
+
+    margin:auto;
+
+}
+
+.hero-badge{
+
+    border:1px solid rgba(255,255,255,.3);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+    letter-spacing:3px;
+
+}
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:76px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#dddddd;
+
+    margin-bottom:45px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    background:#D4AF37;
+
+    color:#000;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn-outline{
+
+    border:2px solid #D4AF37;
+
+    color:#D4AF37;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.btn-outline:hover{
+
+    background:#D4AF37;
+
+    color:#000;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+
+    padding:110px 0;
+
+}
+/* ===========================
+   ABOUT
+=========================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image img{
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.about-content h2{
+    font-size:48px;
+    margin-bottom:15px;
+    font-family:'Cinzel',serif;
+}
+
+.about-content h4{
+    color:#D4AF37;
+    margin-bottom:30px;
+    font-weight:500;
+}
+
+.about-content p{
+    color:#cfcfcf;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   FILM CARDS
+=========================== */
+
+.film-grid,
+.works-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:35px;
+}
+
+.film-card,
+.work-card{
+
+    background:#111;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.film-card:hover,
+.work-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.5);
+
+}
+
+.film-card img,
+.work-card img{
+
+    aspect-ratio:16/9;
+
+    object-fit:cover;
+
+}
+
+.film-info,
+.work-card .content{
+
+    padding:25px;
+
+}
+
+.film-info span{
+
+    color:#D4AF37;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.film-info h3,
+.work-card h3{
+
+    margin:15px 0;
+
+    font-size:25px;
+
+}
+
+.film-info p,
+.work-card p{
+
+    color:#bfbfbf;
+
+    margin-bottom:25px;
+
+}
+
+.film-info a{
+
+    color:#D4AF37;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   SHIKORER TANE
+=========================== */
+
+.series{
+
+    background:#0d0d0d;
+
+}
+
+.series-intro{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    color:#cfcfcf;
+
+}
+
+.episode-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.episode-card{
+
+    padding:35px;
+
+    border-radius:18px;
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.episode-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.episode-card span{
+
+    color:#D4AF37;
+
+    font-size:14px;
+
+}
+
+.episode-card h3{
+
+    margin-top:15px;
+
+    font-size:26px;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:18px;
+
+}
+
+.gallery-grid img{
+
+    border-radius:15px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    text-align:center;
+
+}
+
+.contact h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.contact p{
+
+    color:#cccccc;
+
+    margin-bottom:30px;
+
+}
+
+.contact-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.contact-links a{
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+}
+
+.contact-links a:hover{
+
+    background:#D4AF37;
+
+    color:#000;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    color:#9e9e9e;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:56px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.about-content h2{
+
+font-size:36px;
+
+}
+
+.contact h2{
+
+font-size:34px;
+
+}
+
+}
